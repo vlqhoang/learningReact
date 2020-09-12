@@ -1,0 +1,62 @@
+.photo-grid {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto; // centering elements within
+  display: flex;
+  flex-wrap: wrap;
+
+  figure {
+    border: 1px solid #d3d3d3;
+    padding: 2rem;
+    margin: 0 2rem 2rem 2rem;
+    // giving flexibility of growing
+    // -> elements on the same rows share the same width,
+    // also taking up unnecessary space
+    flex-grow: 1;
+    flex-basis: calc(33.333% - 4rem);
+
+    .photo {
+      width: calc(100% + 4rem);
+      margin: -2rem 0 0 -2rem;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+
+      .btn {
+        flex-basis: 48%;
+        color: red;
+        font-size: 15px;
+        background-color: white;
+        border: 2px solid #f2f2f2;
+        padding: 5px;
+      }
+
+      .btn:hover {
+        cursor: pointer;
+        background-color: lightgrey;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.add-icon-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .add-icon {
+    margin: 20px 0;
+    padding: 40px;
+    background: url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat;
+    background-size: cover;
+    border: none;
+  }
+
+  .add-icon:hover {
+    cursor: pointer;
+  }
+}

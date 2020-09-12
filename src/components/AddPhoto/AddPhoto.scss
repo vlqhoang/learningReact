@@ -1,0 +1,47 @@
+
+.add-form {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 45px;
+
+  input {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 15px;
+
+    /**
+    On specifying width and height for any html components, the result with
+    and height may not be the same as what we stated as it will add some more
+    px from the padding, the border and the margin.
+
+    => So, upon strictly width and height valuation, border box must be set.
+    There are 2 main types:
+    1. content-box: Default. Specified width and height only get applied to the content. Padding, border and margin is not valuated.
+    2. border-box: Specified width and height get applied to the content, padding and border. Margin is not valuated.
+     */
+    box-sizing: border-box; // => strictly force the with of the input to be 100% width of its parent (15px padding has also been calculated).
+
+    font-size: 14px;
+    margin: 0 0 15px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      flex-basis: 50%;
+      flex-grow: 1;
+      color: white;
+      font-size: 14px;
+      background-color: #065784;
+      padding: 15px;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
